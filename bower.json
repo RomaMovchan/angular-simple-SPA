@@ -1,0 +1,13 @@
+{
+  "name": "angular-simple-spa",
+  "description": "SPA",
+  "version": "0.0.0",
+  "homepage": "https://github.com/RomaMovchan/angular-simple-SPA",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-mocks": "1.5.x",
+    "bootstrap": "3.3.x"
+  }
+}
