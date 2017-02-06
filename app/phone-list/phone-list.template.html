@@ -1,0 +1,30 @@
+<ul class="phone-list">
+    <li ng-repeat="phone in $ctrl.phones" class="phone-block">
+        <span class="instock">Only {{phone.instock}} left in stock.</span>
+
+        <div class="phone-item">
+            <div class="col-lg-3 phone-img-block">
+                <a href="#/phones/{{phone.id}}" >
+                    <img class="img-thumbnail" ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
+                </a>
+            </div>
+            <div class="col-lg-9 phone-description">
+                <a class="detail-page-link" href="#/phones/{{phone.id}}">{{phone.name}}</a>
+                <ul>
+                    <li ng-repeat="char in phone.description">{{char.character}}</li>
+                </ul>
+
+            </div>
+            <div class="clear"></div>
+            <span class="price">Price: <span class="price-value">{{phone.price | currency}}</span> + <span>{{phone.shiping | currency}} shipping</span> </span>
+        </div>
+
+
+
+        <button type="button" class="btn btn-warning btn-add-to-cart">
+            <span class="glyphicon glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Add to cart
+        </button>
+
+
+    </li>
+</ul>
