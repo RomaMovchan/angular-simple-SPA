@@ -5,7 +5,15 @@
 angular.module('phonecatApp', [
     'ngRoute',
     'phoneList',
-    'phoneDetail'
+    'phoneDetail',
+    'busketItem'
 ]);
 
+
+angular.module('phonecatApp')
+    .controller('phonecatAppController', [function(){
+        var vm = this;
+
+        vm.showBusket = false;
+    }]);
 

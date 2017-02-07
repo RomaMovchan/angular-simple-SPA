@@ -13,9 +13,6 @@
     font-size: 12px;
     right: -3px;
 }
-.cart-block:hover + .items-busket{
-    display: block;
-}
 
 
 .cart-wrapper{
@@ -25,7 +22,6 @@
     position: relative;
 }
 .items-busket{
-    display: none;
     background: white;
     position: absolute;
     min-height: 300px;
