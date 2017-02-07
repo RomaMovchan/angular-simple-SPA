@@ -58,3 +58,22 @@
     font-size:18px;
     color:red;
 }
+
+.phone-thumbs{
+    list-style-type:none;
+}
+.phone-thumbs li, .specs li{
+    display: inline-block;
+    vertical-align: top;
+    margin:0 15px;
+}
+.phone-thumbs img{
+    width:50px;
+    cursor: pointer;
+}
+
+.search-field{
+    width:200px;
+    margin-bottom:20px;
+}
+

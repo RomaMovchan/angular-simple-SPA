@@ -3,17 +3,24 @@
  */
 
 angular.
-    module('phoneList').
-    component('phoneList', {
+    module('phoneList')
+    .component('phoneList', {
         templateUrl: 'phone-list/phone-list.template.html',
-        controller: ['$http',
-            function PhoneListController($http) {
+        controller: ['$scope', '$http', '$rootScope', function PhoneListController($scope, $http, $rootScope) {
                 var self = this;
-                // self.orderProp = 'age';
+                 self.orderProp = 'category';
 
                 $http.get('phones/phones.json').then(function(response) {
                     self.phones = response.data;
                 });
+
+                localStorage.clear();
+                var cartId = [
+
+                ];
+                localStorage.cartid = JSON.stringify(cartId);
+
+
             }
         ]
 });

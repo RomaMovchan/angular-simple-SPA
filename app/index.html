@@ -6,7 +6,19 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css">
 
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="app.js"></script>
+      <script src="app.config.js"></script>
 
+
+      <script src="phone-list/phone-list.module.js"></script>
+      <script src="phone-list/phone-list.component.js"></script>
+
+
+      <script src="phone-detail/phone-detail.module.js"></script>
+      <script src="phone-detail/phone-detail.component.js"></script>
+      <script src="directives.js"></script>
   </head>
 
   <body>
@@ -26,7 +38,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <div class="search-block">
-            <input ng-model="$ctrl.query" type="text" class="form-control" placeholder="Search...">
+
             <!--<button type="submit" class="btn btn-default">Submit</button>-->
         </div>
 
@@ -43,15 +55,7 @@
   </div>
 
 
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="app.config.js"></script>
 
-  <script src="phone-list/phone-list.module.js"></script>
-  <script src="phone-list/phone-list.component.js"></script>
-  <script src="phone-detail/phone-detail.module.js"></script>
-  <script src="phone-detail/phone-detail.component.js"></script>
 
 
   </body>
