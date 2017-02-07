@@ -11,7 +11,7 @@
       <script src="app.js"></script>
       <script src="app.config.js"></script>
 
-
+      <script src="controllers.js"></script>
       <script src="phone-list/phone-list.module.js"></script>
       <script src="phone-list/phone-list.component.js"></script>
 
@@ -37,10 +37,13 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <div class="search-block">
+        <div class="cart-block">
+          <span class="glyphicon glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>
 
             <!--<button type="submit" class="btn btn-default">Submit</button>-->
         </div>
+        <div class="items-busket" items-in-busket></div>
 
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
