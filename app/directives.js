@@ -6,6 +6,7 @@ module('phoneList')
             restrict: 'A',
             link: function(scope, element, attr){
 
+
                 element.on('click', function (ev) {
                     if(scope.phone.instock > 0) {
 
@@ -19,8 +20,9 @@ module('phoneList')
                     } else {
                         scope.isDisabled = false;
                     }
-
+                    scope.$digest();
                 });
+
             }
 
         }
