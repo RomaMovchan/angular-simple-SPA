@@ -1,5 +1,19 @@
 <div class="cart-wrapper">
-    <div ng-repeat="item in busket.items track by $index">
-        {{item.name}}
+    <div class="busket-items" ng-repeat="item in busket.items track by $index">
+       
+       	<div class="item-block">
+       		<a href="#!/phones/{{item.id}}">
+            	<img class="busket-img" ng-src="{{item.imageUrl}}" alt="{{item.name}}" />
+         	</a>
+       	</div>  
+        <div class="item-block">
+        	<a class="item-name" href="#!/phones/{{item.id}}">{{item.name}}</a>
+        </div> 
+        <span>Колчество: {{item.qty}}</span>
+    </div>
+
+    <div class="summary-busket">
+    	<p class="summary-quant">Общее количество {{busket.quant}}</p>
+    	<p class="summary-price">Общяя сумма {{busket.summ | currency}}</p>
     </div>
 </div>

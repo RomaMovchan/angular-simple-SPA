@@ -1,5 +1,5 @@
-angular.
-module('busketItem')
+angular
+.module('busketItem')
     .directive('itemsInBusket',function(  ){
         return {
             restrict: 'A',
@@ -11,6 +11,7 @@ module('busketItem')
                 vm.items = [];
 
                 vm.summ = 0;
+                vm.quant = 0;
 
                 phoneListService.get()
                     .then(function(res){
@@ -27,7 +28,9 @@ module('busketItem')
                                     phoneItem.qty = busketItemQty;
                                     vm.items.push(phoneItem);
 
-                                    //vm.summ += phoneItem. * phoneItem.qty;
+                                    vm.summ += phoneItem.price * phoneItem.qty;
+                                    vm.quant += phoneItem.qty;
+                                    console.log(phoneItem.qty);
                                 }
                             });
                         });

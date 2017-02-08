@@ -3,16 +3,6 @@
         <input ng-model="$ctrl.query" type="text" class="form-control" placeholder="Search...">
     </div>
 
-    <p>
-        Sort by:
-        <select ng-model="$ctrl.orderProp">
-            <option value="name">Alphabetical</option>
-            <option value="age">Newest</option>
-        </select>
-    </p>
-
-
-
     <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query" class="phone-block">
         <span class="instock">Only <span ng-bind="phone.instock"></span> left in stock.</span>
 
@@ -27,18 +17,12 @@
                 <ul>
                     <li ng-repeat="char in phone.description">{{char.character}}</li>
                 </ul>
-
             </div>
             <div class="clear"></div>
             <span class="price">Price: <span class="price-value">{{phone.price | currency}}</span> + <span>{{phone.shiping | currency}} shipping</span> </span>
         </div>
-
-
-
         <button add-to-cart type="button" class="btn btn-warning btn-add-to-cart" ng-disabled="phone.isDisabled">
             <span class="glyphicon glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Add to cart
         </button>
-
-
     </li>
 </ul>

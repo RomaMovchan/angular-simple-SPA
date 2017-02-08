@@ -1,17 +1,14 @@
-/**
- * Created by Roman.Movchan on 06.02.2017.
- */
-
-angular.module('phoneList')
+angular
+    .module('phoneList')
     .component('phoneList', {
         templateUrl: 'phone-list/phone-list.template.html',
-        controller: ['$scope', '$http', '$rootScope', 'phoneListService', function PhoneListController($scope, $http, $rootScope, phoneListService) {
-            var self = this;
-            self.orderProp = 'category';
-            self.phones = [];
+        controller: ['phoneListService', function PhoneListController(phoneListService) {
+            var vm = this;
+            vm.orderProp = 'category';
+            vm.phones = [];
             phoneListService.get()
                 .then(function(res){
-                    self.phones = res;
+                    vm.phones = res;
                 });
         }]
     });

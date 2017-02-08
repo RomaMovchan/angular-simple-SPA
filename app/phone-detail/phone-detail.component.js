@@ -1,21 +1,18 @@
-/**
- * Created by Roman.Movchan on 06.02.2017.
- */
-angular.
-module('phoneDetail').
-component('phoneDetail', {
+angular
+.module('phoneDetail')
+.component('phoneDetail', {
     templateUrl: 'phone-detail/phone-detail.template.html',
     controller: ['$http', '$routeParams',
         function PhoneDetailController($http, $routeParams) {
-            var self = this;
+            var vm = this;
 
-            self.setImage = function setImage(imageUrl) {
-                self.mainImageUrl = imageUrl;
+            vm.setImage = function setImage(imageUrl) {
+                vm.mainImageUrl = imageUrl;
             };
 
             $http.get('phones/' + $routeParams.phoneId + '.json').then(function(response) {
-                self.phone = response.data;
-                self.setImage(self.phone.images[0]);
+                vm.phone = response.data;
+                vm.setImage(vm.phone.images[0]);
             });
 
         }
