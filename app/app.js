@@ -1,6 +1,4 @@
-/**
- * Created by Roman.Movchan on 06.02.2017.
- */
+'use strict';
 
 angular.module('phonecatApp', [
     'ngRoute',
@@ -12,7 +10,7 @@ angular.module('phonecatApp', [
 
 angular.module('phonecatApp')
     .controller('phonecatAppController', [function(){
-        var vm = this;
+        let vm = this;
 
         vm.showBusket = false;
     }]);

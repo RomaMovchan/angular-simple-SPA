@@ -1,15 +1,14 @@
+'use strict';
 angular
     .module('phoneList')
     .component('phoneList', {
         templateUrl: 'phone-list/phone-list.template.html',
         controller: ['phoneListService', function PhoneListController(phoneListService) {
-            var vm = this;
+            let vm = this;
             vm.orderProp = 'category';
             vm.phones = [];
             phoneListService.get()
-                .then(function(res){
-                    vm.phones = res;
-                });
+                .then(res => vm.phones = res);
         }]
     });
 angular
@@ -21,8 +20,6 @@ angular
 
         function $$get() {
             return $http.get('phones/phones.json')
-                .then(function (response) {
-                    return $q.when(response.data);
-                });
+                .then(response => $q.when(response.data));
         }
     }]);

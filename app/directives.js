@@ -1,3 +1,4 @@
+'use strict';
 angular
 .module('phoneList')
     .directive('addToCart', ['busketItemService', function(busketItemService){

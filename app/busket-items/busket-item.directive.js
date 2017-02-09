@@ -1,3 +1,4 @@
+'use strict';
 angular
 .module('busketItem')
     .directive('itemsInBusket',function(  ){
@@ -5,7 +6,7 @@ angular
             restrict: 'A',
             templateUrl:'busket-items/busket-item.template.html',
             controller: ['busketItemService', 'phoneListService',function(busketItemService, phoneListService){
-                var vm = this;
+                let vm = this;
 
                 vm.phoneItems = [];
                 vm.items = [];
@@ -19,7 +20,7 @@ angular
                         return res;
                     })
                     .then(function(){
-                        return busketItemService.get();
+                       return busketItemService.get();
                     })
                     .then(function(res){
                         angular.forEach(res, function(busketItemQty, busketItemId){

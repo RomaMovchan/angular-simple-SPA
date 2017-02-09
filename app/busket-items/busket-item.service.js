@@ -1,7 +1,8 @@
+'use strict';
 angular
     .module('busketItem')
     .service('busketItemService', ['$q',function($q){
-        var cart_storage_id = 'cart';
+        let cart_storage_id = 'cart';
 
         return {
             get: $$get,
@@ -21,7 +22,7 @@ angular
                 localStorage.setItem(cart_storage_id, JSON.stringify({}));
             }
 
-            var cart = JSON.parse(localStorage.getItem(cart_storage_id));
+            let cart = JSON.parse(localStorage.getItem(cart_storage_id));
 
             if(cart.hasOwnProperty(cart_id)){
                 cart[cart_id] += 1;
